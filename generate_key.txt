@@ -1,4 +1,4 @@
-To genertae the api key:
+To generate the api key:
 1. go to groq.com
 2. Go to developors section and click on Start Building
 3. Login with your mail
