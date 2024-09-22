@@ -1,5 +1,5 @@
 # LearnForge
-Introducing a personalized AI-powered learning assistant designed to help users efficiently master any topic. By assessing users' prior knowledge and time availability, the assistant curates a tailored roadmap of top learning resources. It generates a structured schedule, provides explanatory videos, and offers customized tests to evaluate comprehension. With continuous feedback and strategies for deeper understanding, this app fosters an engaging and adaptive learning experience.
+Introducing a personalized AI-powered learning assistant designed to help users efficiently master any topic. By assessing users' prior knowledge and time availability, the assistant curates a tailored roadmap of top learning resources. It generates a structured schedule,provides best resources from the web, provides explanatory videos, and offers customized tests to evaluate comprehension. With continuous feedback and strategies for deeper understanding, this app fosters an engaging and adaptive learning experience.
 
 
 This project is designed to generate PowerPoint slides, voice explanations, and video presentations from a given topic and subtopic using the Grok API for natural language processing.
@@ -36,9 +36,12 @@ Installation
 3)Ensure that you have Microsoft PowerPoint installed for slide generation.
 
 4)Setup environment variables for the language model 
+5)Create the database:
+  flask db init
+  flask db migrate
+  flask db upgrade
 
 Prerequisites
-
 
 Python 3.x
 
