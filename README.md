@@ -1,6 +1,6 @@
 # LearnForge
+Introducing a personalized AI-powered learning assistant designed to help users efficiently master any topic. By assessing users' prior knowledge and time availability, the assistant curates a tailored roadmap of top learning resources. It generates a structured schedule, provides explanatory videos, and offers customized tests to evaluate comprehension. With continuous feedback and strategies for deeper understanding, this app fosters an engaging and adaptive learning experience.
 
-Automated Slide, Audio, and Video Generator:
 
 This project is designed to generate PowerPoint slides, voice explanations, and video presentations from a given topic and subtopic using the Grok API for natural language processing.
 
