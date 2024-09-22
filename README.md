@@ -1,4 +1,5 @@
-# Note: We have used win32 for this project but later realised that it only supports windows but not macOS. So for now our project does not support macOS. However as its easy to implement, we will release it after midsems.
+# Note:
+We have used win32 for this project but later realised that it only supports windows but not macOS. So for now our project does not support macOS. However as its easy to implement for macOS, we will release it after midsems.
 
 # LearnForge
 Introducing a personalized AI-powered learning assistant designed to help users efficiently master any topic. By assessing users' prior knowledge and time availability, the assistant curates a tailored roadmap of top learning resources. It generates a structured schedule,provides best resources from the web, provides explanatory videos, and offers customized tests to evaluate comprehension. With continuous feedback and strategies for deeper understanding, this app fosters an engaging and adaptive learning experience.
