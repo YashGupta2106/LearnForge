@@ -29,8 +29,16 @@ FPDF: For generating PDFs with explanations.
 PowerPoint COM (via comtypes): For converting .pptx slides into images (Windows only).
 
 Installation
+1)Clone the repository:https://github.com/YashGupta2106/LearnForge
+
+2)Install the required dependencies:  pip install -r requirements.txt
+
+3)Ensure that you have Microsoft PowerPoint installed for slide generation.
+
+4)Setup environment variables for the language model 
 
 Prerequisites
+
 
 Python 3.x
 
