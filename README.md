@@ -30,7 +30,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/project-name.git
+git clone https://github.com/YashGupta2106/LearnForge
 cd project-name
 Install the dependencies:
 
