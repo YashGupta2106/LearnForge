@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Presentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./playvideo.css') }}">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .styled-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .styled-button:hover {
+            background-color: #0056b3;
+        }
+
+        video {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Presentation for {{ topic }}: {{ subtopic }}</h1>
+    <video id="presentationVideo" width="800" height="600" controls>
+        <source src="{{ url_for('static', filename='presentation_video.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <button class="styled-button" onclick="history.back();">Back to Roadmap</button>
+
+    <script>
+        const video = document.getElementById('presentationVideo');
+        video.onended = function() {
+            window.location.href = "{{ url_for('mcq_test', topic=topic, subtopic=subtopic) }}";
+        };
+    </script>
+
+    <p><b>Note: A PDF file consisting of detailed explanation for the topic has been saved on your machine. Refer it to learn the topic better.</b></p>
+</body>
+</html>

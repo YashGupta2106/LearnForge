@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Test for {{ subtopic }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./mcq_test.css') }}">
+    <style>
+        /* Inline styling for the button */
+        .button-container {
+            text-align: center; /* Center the button */
+            margin-top: 20px;
+        }
+        .styled-button {
+            background-color: #4CAF50; /* Green background */
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+        .styled-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='./learnforge.png') }}" alt="Logo" class="logo"> <!-- Add your image here at the top left -->
+    <div class="container">
+        <h1>MCQ Test for {{ subtopic }}</h1>
+        {% if questions %}
+            {% for q in questions %}
+                <div>
+                    <p>{{ q.question }}</p>
+                    <ul>
+                        {% for option in q.options %}
+                            <li>{{ option }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p>{{ q.answer }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No questions available.</p>
+        {% endif %}
+        
+        <!-- Centered and styled Back to Slides button -->
+        
+        <div class="button-container">
+            
+            <button class="styled-button" onclick="history.back();">Back to Video</button>
+        </div>
+        <p class="note">If you get more than 2 wrong answers, learn the topic again</p>
+    </div>
+</body>
+</html>
