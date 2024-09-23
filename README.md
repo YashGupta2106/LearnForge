@@ -6,36 +6,37 @@ Introducing a personalized AI-powered learning assistant designed to help users 
 
 YouTube link : https://youtu.be/21PAZAvpKEw
 
-This project is designed to generate PowerPoint slides, voice explanations, and video presentations from a given topic and subtopic using the Grok API for natural language processing.
+This project is designed to generate PowerPoint slides, voice explanations, and video presentations from a given topic and subtopic using the Groq API for natural language processing.
 
-Features:
+# Features:
 
-Slide Generation: Automatically create PowerPoint slides on a given topic/subtopic.
+1)Slide Generation: Automatically create PowerPoint slides on a given topic/subtopic.
 
-Audio Explanation: Generate audio explanations for each slide using the gTTS library.
+2)Audio Explanation: Generate audio explanations for each slide using the gTTS library.
 
-Video Creation: Convert PowerPoint slides into images and create a synchronized video using the moviepy library.
+3)Video Creation: Convert PowerPoint slides into images and create a synchronized video using the moviepy library.
 
-MCQ Test: Generate multiple-choice questions (MCQs) for testing knowledge on the topic.
+4)MCQ Test: Generate multiple-choice questions (MCQs) for testing knowledge on the topic.
 
-PDF Generation: Generate detailed explanation and example and stores it to local disk as a PDF for in depth learning.
+5)PDF Generation: Generate detailed explanation and example and stores it to local disk as a PDF for in depth learning.
 
-Technologies Used
-Python
+# Technologies Used:
 
-Flask: For web-based interaction and user interface.
+-Python
 
-Grok: For generating text content (slides and MCQs).
+-Flask: For web-based interaction and user interface.
 
-gTTS: For converting text to speech (audio explanations).
+-Groq: For generating text content (slides and MCQs).
 
-moviepy: For combining slides and audio into video.
+-gTTS: For converting text to speech (audio explanations).
 
-FPDF: For generating PDFs with explanations.
+-moviepy: For combining slides and audio into video.
 
-PowerPoint COM (via comtypes): For converting .pptx slides into images (Windows only).
+-FPDF: For generating PDFs with explanations.
 
-Installation
+-PowerPoint COM (via comtypes): For converting .pptx slides into images (Windows only).
+
+# Installation:
 
 1)Clone the repository:https://github.com/YashGupta2106/LearnForge
 
@@ -43,83 +44,65 @@ Installation
 
 3)Ensure that you have Microsoft PowerPoint installed for slide generation.
 
-4)Setup environment variables for the language model 
-5)Create the database:
-  flask db init
-  flask db migrate
-  flask db upgrade
 
--Prerequisites
+# Prerequisites
 
-Python 3.x
+Python 3.11
 
--Required libraries:
+# Required libraries:
 
-pip install flask gtts moviepy fpdf comtypes groq
+-pip install flask gtts moviepy fpdf comtypes groq
 
-For PowerPoint COM automation, ensure you have PowerPoint installed (Windows only).
+(For PowerPoint COM automation, ensure you have PowerPoint installed (Windows only)).
 
-Project Setup
+# Project Setup:
 
-Clone the repository:
+1)Clone the repository using :
 
 git clone https://github.com/YashGupta2106/LearnForge
 
-cd project-name
+2)cd project-name
 
-Install the dependencies:
+3)Install the dependencies:
 
 pip install -r requirements.txt
 
-Set up the Grok API by configuring your API key. Replace placeholder keys with your credentials in the code where groq.chat.completions.create() is used.
+4)Set up the Groq API by configuring your API key. Replace placeholder keys with your credentials in the code in line number 35 in place of your_api_key.
 
-Usage
-Run the Flask Application:
+# Usage:
+
+1)Run the Flask Application:
 
 python app.py
 
-Generating Slides and Video:
+2) Navigate to the local host link generated in the terminal.
 
-Navigate to the URL path /generate_slides/<topic>/<subtopic>/<level>.
+# Key Functions:
 
-This will generate PowerPoint slides, convert them to images, generate audio explanations, and combine them into a video presentation.
+1) generate_slides(): Generates a list of slide content based on the topic and subtopic using Groq.
 
-Viewing the Generated Video:
+2) create_ppt(): Converts the generated slides into a .pptx PowerPoint file.
 
-After generating the video, you will be redirected to the /play_video/<topic>/<subtopic> route, where the video will be displayed.
+3) convert_pptx_to_images(): Converts the PowerPoint slides into individual images.
 
-Taking an MCQ Test:
+4) generate_voice_explanations(): Generates voice explanations for each slide using gTTS.
 
-Navigate to /mcq_test/<topic>/<subtopic> to take a test generated from Grok.
+5) create_video(): Combines the images and audio into a final video file.
 
-Key Functions
+6) generate_mcq_questions(): Generates multiple-choice questions for the given topic using Groq.
 
-generate_slides(topic, subtopic): Generates a list of slide content based on the topic and subtopic using Grok.
+7) generate_pdf(): You can also generate detailed PDF Explanation for any topic by calling the generate_pdf function.
 
-create_ppt(slides, output_file): Converts the generated slides into a .pptx PowerPoint file.
+# Notes:
 
-convert_pptx_to_images(pptx_path, images_folder): Converts the PowerPoint slides into individual images.
+Windows Only(For now): PowerPoint COM automation (for converting .pptx slides to images) only works on Windows systems with PowerPoint installed.
 
-generate_voice_explanations(slide_contents, audio_folder): Generates voice explanations for each slide using gTTS.
+Groq API: Ensure that Groq is properly configured for text generation.
 
-create_video(images_folder, audio_folder, output_video): Combines the images and audio into a final video file.
-
-generate_mcq_questions(topic, subtopic): Generates multiple-choice questions for the given topic using Grok.
-
-PDF Explanation.
-
-You can also generate detailed PDF Explanation for any topic by calling the generate_pdf function.
-
-pdf_filename = generate_pdf(subtopic, topic, level)
-Notes
-
-Windows Only: PowerPoint COM automation (for converting .pptx slides to images) only works on Windows systems with PowerPoint installed.
-
-Grok API: Ensure that Grok is properly configured for text generation.
-
-Contributing
+# Contributing:
 Feel free to submit issues or pull requests to improve the project.
 
-License
-This project is licensed under the MIT License.
+# Contributors:
+Aaryan Antala, Ramya Parsania, Ansh Gupta, Yash Gupta
+
 
