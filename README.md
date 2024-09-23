@@ -8,7 +8,8 @@ YouTube link : https://youtu.be/21PAZAvpKEw
 
 This project is designed to generate PowerPoint slides, voice explanations, and video presentations from a given topic and subtopic using the Grok API for natural language processing.
 
-Features
+Features:
+
 Slide Generation: Automatically create PowerPoint slides on a given topic/subtopic.
 
 Audio Explanation: Generate audio explanations for each slide using the gTTS library.
@@ -16,6 +17,8 @@ Audio Explanation: Generate audio explanations for each slide using the gTTS lib
 Video Creation: Convert PowerPoint slides into images and create a synchronized video using the moviepy library.
 
 MCQ Test: Generate multiple-choice questions (MCQs) for testing knowledge on the topic.
+
+PDF Generation: Generate detailed explanation and example and stores it to local disk as a PDF for in depth learning.
 
 Technologies Used
 Python
@@ -33,6 +36,7 @@ FPDF: For generating PDFs with explanations.
 PowerPoint COM (via comtypes): For converting .pptx slides into images (Windows only).
 
 Installation
+
 1)Clone the repository:https://github.com/YashGupta2106/LearnForge
 
 2)Install the required dependencies:  pip install -r requirements.txt
@@ -45,15 +49,11 @@ Installation
   flask db migrate
   flask db upgrade
 
-Prerequisites
+-Prerequisites
 
 Python 3.x
 
-Required libraries:
-
-bash
-
-Copy code
+-Required libraries:
 
 pip install flask gtts moviepy fpdf comtypes groq
 
@@ -63,19 +63,11 @@ Project Setup
 
 Clone the repository:
 
-bash
-
-Copy code
-
 git clone https://github.com/YashGupta2106/LearnForge
 
 cd project-name
 
 Install the dependencies:
-
-bash
-
-Copy code
 
 pip install -r requirements.txt
 
@@ -83,10 +75,6 @@ Set up the Grok API by configuring your API key. Replace placeholder keys with y
 
 Usage
 Run the Flask Application:
-
-bash
-
-Copy code
 
 python app.py
 
@@ -118,12 +106,10 @@ create_video(images_folder, audio_folder, output_video): Combines the images and
 
 generate_mcq_questions(topic, subtopic): Generates multiple-choice questions for the given topic using Grok.
 
-PDF Roadmap Generation
+PDF Explanation.
 
-You can also generate detailed PDF roadmaps for any topic by calling the generate_pdf function.
+You can also generate detailed PDF Explanation for any topic by calling the generate_pdf function.
 
-bash
-Copy code
 pdf_filename = generate_pdf(subtopic, topic, level)
 Notes
 
