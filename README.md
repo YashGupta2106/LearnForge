@@ -22,19 +22,19 @@ This project is designed to generate PowerPoint slides, voice explanations, and 
 
 # Technologies Used:
 
--Python
-
--Flask: For web-based interaction and user interface.
-
--Groq: For generating text content (slides and MCQs).
-
--gTTS: For converting text to speech (audio explanations).
-
--moviepy: For combining slides and audio into video.
-
--FPDF: For generating PDFs with explanations.
-
--PowerPoint COM (via comtypes): For converting .pptx slides into images (Windows only).
+  -Python
+  
+  -Flask: For web-based interaction and user interface.
+  
+  -Groq: For generating text content (slides and MCQs).
+  
+  -gTTS: For converting text to speech (audio explanations).
+  
+  -moviepy: For combining slides and audio into video.
+  
+  -FPDF: For generating PDFs with explanations.
+  
+  -PowerPoint COM (via comtypes): For converting .pptx slides into images (Windows only).
 
 # Installation:
 
@@ -51,31 +51,31 @@ Python 3.11
 
 # Required libraries:
 
--pip install flask gtts moviepy fpdf comtypes groq
+  -pip install flask gtts moviepy fpdf comtypes groq
 
-(For PowerPoint COM automation, ensure you have PowerPoint installed (Windows only)).
+  (For PowerPoint COM automation, ensure you have PowerPoint installed (Windows only)).
 
 # Project Setup:
 
 1)Clone the repository using :
 
-git clone https://github.com/YashGupta2106/LearnForge
+-  git clone https://github.com/YashGupta2106/LearnForge
 
 2)cd project-name
 
 3)Install the dependencies:
 
-pip install -r requirements.txt
+-  pip install -r requirements.txt
 
-4)Set up the Groq API by configuring your API key. Replace placeholder keys with your credentials in the code in line number 35 in place of your_api_key.
+4)Set up the Groq API by configuring your API key. Replace placeholder keys with your credentials in the code in line number 35 in place of your_api_key. You can generate it by following steps in the generate_key.txt file.
 
 # Usage:
 
 1)Run the Flask Application:
 
-python app.py
+-  python app.py
 
-2) Navigate to the local host link generated in the terminal.
+2)Navigate to the local host link generated in the terminal.
 
 # Key Functions:
 
